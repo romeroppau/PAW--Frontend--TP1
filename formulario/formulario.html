@@ -6,7 +6,7 @@
     <title>PAWPrints</title>
 </head>
 <body>
-    <header>
+     <header>
         <img src="/media/logo.png" alt="logo" width="100" height="100">
         <nav>
             <a href="/index.html">Home</a>
@@ -16,7 +16,105 @@
             <a href="/nosotros/nosotros.html">Nosotros</a>
             <a href="/contacto/contacto.html">Contacto</a>
         </nav>
+                <form role="search">
+            <label for="buscar">Buscar libro</label>
+            <input type="search" id="buscar" name="buscar">
+            <button type="submit">Buscar</button>
+        </form>
+        <nav aria-label="Cuenta">
+            <a href="/login.html">Sign in</a>
+            <a href="/registro.html">Register</a>
+            <a href="/notificaciones.html">Notificaciones</a>
+            <a href="/carrito/carrito.html">Carrito</a>
+        </nav>
     </header>
+    <main>
+        <section id="reserva">
+            <h1>Reserva de libro</h1>
+            <p>Completá el formulario para reservar tu ejemplar y retirarlo en el local.</p>
+            <form action="#" method="post">
+                <label for="nombre">Nombre completo:</label>
+                
+                <input type="text"
+                       placeholder="Juan Pérez"
+                       required>
+         
+
+                <label for="email">Email:</label>
+             
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="juan.perez@mail.com"
+                       required>
+               
+
+                <label for="telefono">Teléfono:</label>
+                
+                <input type="tel"
+                       id="telefono"
+                       name="telefono"
+                       placeholder="02323-123456"
+                       required>
+              
+                <label for="libro">Libro a reservar:</label>
+              
+                <select id="libro" name="libro" required>
+                    <option value="" selected disabled>Seleccioná un libro</option>
+                    <option value="monje-ferrari">El monje que vendió su Ferrari</option>
+                    <option value="revolucion-abundancia">La revolución de la abundancia</option>
+                    <option value="sutil-arte">El sutil arte de que casi todo te importe una mierda</option>
+                    <option value="poder-ahora">El poder del ahora</option>
+                </select>
+           
+
+                <label for="cantidad">Cantidad de ejemplares:</label>
+            
+                <input type="number"
+                       id="cantidad"
+                       name="cantidad"
+                       min="1"
+                       max="5"
+                       step="1"
+                       value="1"
+                       required>
+               
+                <label for="fecha-retiro">Fecha de retiro:</label>
+                
+                <input type="date"
+                       id="fecha-retiro"
+                       name="fecha-retiro"
+                       min="2026-09-08"
+                       required>
+           
+
+                <fieldset>
+                    <legend>Forma de entrega:</legend>
+                    <input type="radio" id="entrega-local" name="entrega" value="local" checked>
+                    <label for="entrega-local">Retiro en el local</label>
+                  
+                    <input type="radio" id="entrega-domicilio" name="entrega" value="domicilio">
+                    <label for="entrega-domicilio">Envío a domicilio</label>
+                </fieldset>
+              
+
+                <label for="comentarios">Comentarios (opcional):</label>
+          
+                <textarea id="comentarios"
+                          name="comentarios"
+                          rows="4"
+                          cols="40"
+                          maxlength="300"></textarea>
+             
+
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">Acepto los términos y condiciones de reserva</label>
+               
+
+                <button type="submit">Reservar libro</button>
+            </form>
+        </section>
+    </main>
     <footer>
         <p>© 2026 PAWprints - La 25</p>
     </footer>
